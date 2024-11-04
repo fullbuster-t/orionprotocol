@@ -1,0 +1,165 @@
+.main__flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.main__left {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main__profile {
+    background-color: $boxColor;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.main__name {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.main__phrase {
+    text-align: center;
+    color: $lightGray;
+}
+
+.main__subtitle {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.main__symbol {
+    width: 0.5rem;
+    height: 3rem;
+    background-color: $primaryColor;
+    border-radius: 15px;
+    margin-right: 1rem;
+}
+
+.main__categories {
+    background-color: $boxColor;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.main__categories--list {
+    padding: 0;
+}
+
+.main__categories--element {
+    list-style: none;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.main__categories--element:hover {
+    background-color: $secondaryColor;
+    color: $primaryColor
+}
+
+.main__tags {
+    background-color: $boxColor;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.main__tags--list {
+    padding: 0;
+}
+
+.main__tags--element {
+    list-style: none;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.main__tags--element:hover {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+.main__center {
+    width: 60%;
+}
+
+.main__right {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main__recent {
+    background-color: $boxColor;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.main__recent--list {
+    padding: 0;
+}
+
+.main__recent--element {
+    list-style: none;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+}
+
+.main__recent--element:hover {
+    background-color: $secondaryColor;
+    .main__recent--link {
+        color: $primaryColor;
+    }
+}
+
+.main__popular {
+    background-color: $boxColor;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.main__popular--list {
+    padding: 0;
+}
+
+.main__popular--element {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.main__popular--element:hover {
+    background-color: gray;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .main__flex {
+        flex-direction: column;
+    }
+
+    .main__left {
+        width: 100%;
+    }
+
+    .main__img {
+        width: 50%;
+    }
+    
+    .main__center {
+        width: 100%;
+    }
+
+    .main__right {
+        width: 100%;
+    }
+}

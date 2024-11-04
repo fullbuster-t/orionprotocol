@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="main__about">
+    <a class="main__posts--title">
+        <div class="main__symbol"></div>
+        <h2>{{ page.title }}</h2>
+    </a>
+    <div class="main__posts--data">
+        <div class="main__posts--info">
+            <span class="main__posts--icon"><i class="fa-regular fa-calendar"></i></span>
+            <small class="main__posts--words">{{ page.date | date: "%d-%m-%Y" }}</small>
+        </div>
+        <div class="main__posts--info">
+            <span class="main__posts--icon"><i class="fa-solid fa-bars"></i></span>
+            <small class="main__posts--words">{{ page.categories | first }}</small>
+        </div>
+        <div class="main__posts--info">
+            <span class="main__posts--icon"><i class="fa-solid fa-hashtag"></i></span>
+            <small class="main__posts--words">{{ page.tags | first }}</small>
+        </div>
+    </div>
+    <div class="post__cover">
+        <img src="{{ page.img | relative_url }}" alt="" class="post__img">
+    </div>
+    {{ content }}
+</div>
+

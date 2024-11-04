@@ -1,0 +1,118 @@
+.post__cover{
+    margin: 3rem 4rem;
+}
+
+.main__posts {
+    padding: 0;
+    margin: 0;
+}
+
+.main__posts--item {
+    background-color: $boxColor;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.main__posts--flex {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.main__posts--left {
+    width: 70%;
+}
+
+.main__posts--title {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.main__posts--data {
+    display: flex;
+    gap: 2rem;
+    margin-left: 1.5rem;
+}
+
+.main__posts--info{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.main__posts--icon {
+    padding: 0.7rem 0.9rem;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    border-radius: 0.5rem;
+}
+
+.main__posts--words {
+    color: $gray;
+}
+
+.main__posts--descriptions {
+    margin-left: 1.5rem;
+}
+
+.main__posts--description {
+    font-size: 1.8rem;
+}
+
+
+.main__pagination {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination__next {
+    background-color: $secondaryColor;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.pagination__current {
+    background-color: $primaryColor;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    color: $backColor;
+}
+
+.pagination__prev {
+    background-color: $secondaryColor;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.main__posts--right {
+    width: 30%;
+}
+
+.main__posts--image:hover {
+    filter: opacity(0.4);
+    box-shadow: -0.5px -0.5px 2px 2px $primaryColor;
+    //border: 1px solid $primaryColor;
+}
+
+@media (max-width: 768px) {
+    .main__posts--flex {
+        flex-direction: column-reverse;
+    }
+
+    .main__posts--left {
+        width: 90%;
+    }
+
+    .main__posts--right {
+        width: 70%;
+    }
+}

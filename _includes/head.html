@@ -1,0 +1,11 @@
+<head>
+    <meta charset="utf-8">
+    <title>{%if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{- 'assets/css/styles.css' | relative_url -}}">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/2a41090a52.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    {%- seo title=false -%}
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/173836287?v=4">
+  </head>

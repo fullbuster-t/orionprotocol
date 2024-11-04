@@ -1,0 +1,64 @@
+---
+layout: default
+title: Inicio
+pagination:
+  enabled: true
+---
+
+<div class="posts">
+    {% for post in paginator.posts %}
+        <li class="main__posts--item">
+            <div class="main__posts--flex">
+                <div class="main__posts--left">
+                    <a href="{{ post.url }}" class="main__posts--title">
+                        <div class="main__symbol"></div>
+                        <h2>{{ post.title }}</h2>
+                    </a>
+                    <div class="main__posts--data">
+                        <div class="main__posts--info">
+                            <span class="main__posts--icon"><i class="fa-regular fa-calendar"></i></span>
+                            <small class="main__posts--words">{{ post.date | date: "%d-%m-%Y" }}</small>
+                        </div>
+                        <div class="main__posts--info">
+                            <span class="main__posts--icon"><i class="fa-solid fa-bars"></i></span>
+                            <small class="main__posts--words">{{ post.categories | first }}</small>
+                        </div>
+                        <div class="main__posts--info">
+                            <span class="main__posts--icon"><i class="fa-solid fa-hashtag"></i></span>
+                            <small class="main__posts--words">{{ post.tags | first }}</small>
+                        </div>
+                    </div>
+                    <div class="main__posts--descriptions">
+                        <p class="main__posts--description">{{ post.description }}</p>
+                        <p class="main__posts--words">{% assign word_count = post.content | number_of_words %}{{ word_count
+                            }} palabras | {% assign reading_time = word_count | divided_by: 200 %}{{ reading_time }}
+                            minuto{% if reading_time > 1 %}s{% endif %}</p>
+                    </div>
+                </div>
+    
+                {% if post.img %}
+                <div class="main__posts--right">
+                    <a href="{{ post.url | relative_url }}">
+                        <img src="{{ post.img | relative_url }}" alt="{{ post.title }}" class="main__posts--image">
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </li>
+    {% endfor %}
+</div>
+
+
+<!-- Links de paginación -->
+<div class="main__pagination">
+    <div class="main__pagination--next">
+        <a href="{% if paginator.previous_page %}{{ paginator.previous_page_path }}{% endif %}" class="pagination__next"><i class="fa-solid fa-angle-left"></i></a>
+    </div>
+    <div class="main__pagination--number">
+        <!-- Mostrar el número de página actual -->
+        <span class="pagination__current">{{ paginator.page }}</span>
+    </div>
+    <div class="main__pagination--prev"> 
+        <a href="{% if paginator.next_page %}{{ paginator.next_page_path }}{% endif %}" class="pagination__prev"><i class="fa-solid fa-angle-right"></i></a>
+    </div> 
+</div>

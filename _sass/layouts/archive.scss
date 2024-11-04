@@ -1,0 +1,64 @@
+.main__archive {
+    background-color: $boxColor;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.main__archive--item {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.main__archive--flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.main__archive--left {
+    display: flex;
+    gap: 1rem;
+    color: $lightGray;
+}
+
+.main__archive--symbol {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: $lightGray;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.main__archive--right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__archive--title {
+    width: 60%;
+}
+
+.main__archive--categories {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main__archive--categories {
+    width: 40%;
+    color: $lightGray;
+}
+
+.main__archive--item:hover {
+    background-color: $secondaryColor;
+    .main__archive--symbol {
+        height: 2.5rem;
+        background-color: $primaryColor;
+    }
+    .main__archive--post {
+        color: $primaryColor;
+    }
+}
